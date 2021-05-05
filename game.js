@@ -104,15 +104,11 @@
     img.src=`./letters-numbers/${imgArray[a]}.png`;
     img.style.width='200px';
     img.style.height='300px';
-    img.style.flex='0 0 auto';
-    img.style.objectFit='cover';
+    img.style.flex='0 0 300px';
     img.style.cursor='pointer';
     img.style.margin='5px';
-    img.style.border='1px solid rgb(65, 41, 41)';
-    img.style.borderRadius='10px';
-    img.style.overflow='hidden';
     img.style.transform='scale(.95)';
-    img.style.transition='all .3s ';
+    img.style.transition='all 0.3s ';
     img.onmouseover=function(){
       this.style.transform='scale(1.1)';
     }
@@ -128,6 +124,7 @@
     let image=document.getElementById(imgArray[x])
   image.onclick=function(){order(imgArray[x]);}}
   function order(variable){setLetterSound(variable); runAudioPlayer();}
+
   let thumpnail=document.getElementsByClassName('thumpnail');
   let slider=document.getElementById('slider');
   let buttonRight=document.getElementById('slide-right');
@@ -140,21 +137,21 @@ slider.scrollLeft-=125;
       });
 
       const maxScrollLeft=slider.scrollWidth-slider.clientWidth;
-      //alert(maxScrollLeft);
       //auto plau slider
       function autoPlay(){
         if(slider.scrollLeft>(maxScrollLeft-1)){
           slider.scrollLeft-=maxScrollLeft;
+          alert(slider.maxScrollLeft);
         }
         else{slider.scrollLeft+=1;}
       }
       let play=setInterval(autoPlay,50);
       //pause the slider on hover
-      for(let i=0;i<thumpnail.length;i++){
+      /*for(let i=0;i<thumpnail.length;i++){
         thumpnail[i].addEventListener("mouseover",()=>{
           clearInterval(play);
         })
         thumpnail[i].addEventListener('mouseout',()=>{
           return play=setInterval(autoPlay,50);
         })
-      }
+      }*/

@@ -8,46 +8,54 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-    <head></head>
-    <audio preload="none" id="audio">
-      <source id="mp3Source" src="sounds/mp3/like-glass.mp3" type="audio/mp3">
-      Oops! Sorry you're using an old browser, try using a modern browser like Google Chrome, Firefox or even Safari.
-    </audio>
-    <!-------------------------------------------------------------------------------->
-    <div class="main-cont">
+  <body style="background-color: chocolate;">
+    <header></header>
+    <main>
+      <!------------------------------------------------------------------------------------>
+      <img src="letters-numbers/smile.webp"><img style=" margin-left: 80px" src="letters-numbers/hello.png" >
+        <h1>Please press on any letter or number to get sounds</h1>
+        <div class="slide-container">
+          <img id="slide-left" class="arrow" src="letters-numbers/left-arrow.png" alt="leftRow">
+<section id="slider" class="container">
+<!--Here the images-->
+</section>
+          <img id="slide-right" class="arrow" src="letters-numbers/right-arrow.png" alt="rightRow">
+        </div>
+        <!---------------------------------------------------------------------------------->
+        <audio preload="none" id="audio">
+          <source id="mp3Source" src="sounds/mp3/like-glass.mp3" type="audio/mp3">
+          Oops! Sorry you're using an old browser, try using a modern browser like Google Chrome, Firefox or even Safari.
+        </audio>
+        <!-------------------------------------------------------------------------------->
+        <div style="display: grid;grid-template-rows:200px 300px 300px 300px;" class="main-cont">
+         <div> <img style="margin-left: 50px;margin-top: 50px;" src="letters-numbers/frog.webp" width="100px" height=200px>
+          <img style="margin-left: 70px;position: relative;bottom: 0px;" src="letters-numbers/elephant.webp"  width="150px" height=200px>
+          <img style="margin-left: 400px;position: relative;bottom: 0px;" src="letters-numbers/bird.png"  width="150px" height=200px>
+          <img style="margin-left: 400px;position: relative;bottom: 200px;" src="letters-numbers/tadpole.webp"  width="150px" height=200px>
+          <img style="margin-left: 600px;position: relative;bottom: 400px;" src="letters-numbers/tortoise.webp"  width="150px" height=200px>
+        </div>
+          <div class="char-cont">
+              <h2 class="title">If you want to use keyboard just press on it</h2>
+              <p class="big-char" id="big-char">Enter here
+              </p>
+          </div>
           <div id="about-cont" class="about-white-bg">
-            <h2 class="about-title">A simple game to teach kids the English alphabets and numbers</h2>
             <div class="about-image"></div>
-            <p class="about-text">
+            <p style="font-style: italic;">
               This page was created by Ali mohammed alshahmeh
             </p>
-            <p class="about-text">
+            <p>
               you can follow me on : <a style="margin-left:10px ;" href="https://www.youtube.com/channel/UC2obp75cm4qc6nLfozvcIIQ/playlists"><i class="fab fa-youtube"></i></a><a  style="margin-left:10px ;"  href="https://web.facebook.com/ali.alshahmeh.1"><i class="fab fa-facebook-f"></i></a><a  style="margin-left:10px ;"  href="https://twitter.com/Ali73444192"><i class="fab fa-twitter"></i></a>
             </p>
             <hr>
             <button id="hide-button" type="button" name="button">Hide</button>
           </div>
-      <div class="char-cont">
-        <p id="big-char">
-          Type any letter
-        </p>
-      </div>
-      <section>
-        <button id="mute-button" class="habibi-button" type="button" name="button">Mute Sounds</button>
-        <button id="about-button" class="habibi-button" type="button" name="button">About</button>
-      </section>
-      </div>
-      <!----------------------------------------------------------------->
-        <h1>Please press on any letter or number to get sounds</h1>
-        <div class="slide-container">
-          <img id="slide-left" class="arrow" src="letters-numbers/leftRow.png" alt="leftRow">
-<section id="slider" class="container">
-<!--Here the images-->
-</section>
-          <img id="slide-right" class="arrow" src="letters-numbers/rightRow.png" alt="rightRow">
-        </div>
-        <!---------------------------------------------------------------------------------->
+          <div>
+            <button style="font-size: large; background-color: tomato; color: white; border-radius: 10px; width: 150px;height: 50px; margin-left: 350px; position: absolute;top: 2000px;" id="mute-button" type="button" name="button">Mute Sounds</button>
+            <button style="font-size: large; background-color: tomato; color: white; border-radius: 10px; height: 50px; width: 150px; position: absolute;top: 2000px;margin-left: 500px;" id="about-button" type="button" name="button">About</button>
+            </div>
+          </div>
+        </main>
       <footer></footer>
     <script src="game.js"></script>
   </body>
